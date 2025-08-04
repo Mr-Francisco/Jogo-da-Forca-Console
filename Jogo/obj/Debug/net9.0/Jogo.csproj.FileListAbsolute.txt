@@ -1,0 +1,15 @@
+C:\Meus_Projecto\Repository\Jogo-da-Forca-Console\Jogo\bin\Debug\net9.0\Jogo.exe
+C:\Meus_Projecto\Repository\Jogo-da-Forca-Console\Jogo\bin\Debug\net9.0\Jogo.deps.json
+C:\Meus_Projecto\Repository\Jogo-da-Forca-Console\Jogo\bin\Debug\net9.0\Jogo.runtimeconfig.json
+C:\Meus_Projecto\Repository\Jogo-da-Forca-Console\Jogo\bin\Debug\net9.0\Jogo.dll
+C:\Meus_Projecto\Repository\Jogo-da-Forca-Console\Jogo\bin\Debug\net9.0\Jogo.pdb
+C:\Meus_Projecto\Repository\Jogo-da-Forca-Console\Jogo\obj\Debug\net9.0\Jogo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Meus_Projecto\Repository\Jogo-da-Forca-Console\Jogo\obj\Debug\net9.0\Jogo.AssemblyInfoInputs.cache
+C:\Meus_Projecto\Repository\Jogo-da-Forca-Console\Jogo\obj\Debug\net9.0\Jogo.AssemblyInfo.cs
+C:\Meus_Projecto\Repository\Jogo-da-Forca-Console\Jogo\obj\Debug\net9.0\Jogo.csproj.CoreCompileInputs.cache
+C:\Meus_Projecto\Repository\Jogo-da-Forca-Console\Jogo\obj\Debug\net9.0\Jogo.sourcelink.json
+C:\Meus_Projecto\Repository\Jogo-da-Forca-Console\Jogo\obj\Debug\net9.0\Jogo.dll
+C:\Meus_Projecto\Repository\Jogo-da-Forca-Console\Jogo\obj\Debug\net9.0\refint\Jogo.dll
+C:\Meus_Projecto\Repository\Jogo-da-Forca-Console\Jogo\obj\Debug\net9.0\Jogo.pdb
+C:\Meus_Projecto\Repository\Jogo-da-Forca-Console\Jogo\obj\Debug\net9.0\Jogo.genruntimeconfig.cache
+C:\Meus_Projecto\Repository\Jogo-da-Forca-Console\Jogo\obj\Debug\net9.0\ref\Jogo.dll
