@@ -19,6 +19,8 @@ namespace Exercicios
 
             Console.Clear();
             System.Console.WriteLine("Benvindo ao jogo da Forca  ");
+              Console.WriteLine("Queris continuar se sim prima 'S' ");
+          
             Resposta = Console.ReadLine();
             if (Resposta is null)
                 Resposta = "N";
@@ -27,15 +29,19 @@ namespace Exercicios
             {
 
                 Retorno = Jogos();
+                Console.Clear();
                 if (Retorno == 0)
                     Console.Write("Voce Perdeu !");
                 else if (Retorno == 1)
                     Console.Write("Voce Venceu !");
                 else
                     Console.Write("Nao Sei");
-                   
 
-                    Console.Write("Quer continuar ? sem prima s ");
+
+                Console.Write("Quer continuar ? sem prima s ");
+                    Resposta = Console.ReadLine();
+            if (Resposta is null)
+                Resposta = "N";
 
 
             }
@@ -49,8 +55,7 @@ namespace Exercicios
 
 
 
-            Console.WriteLine("queris continuar se sim prima 'S' ");
-            Resposta = System.Console.ReadLine();
+          
 
            
 
@@ -107,7 +112,7 @@ namespace Exercicios
             while (Acertos <= caracterCertos.Length)
             {
                 Console.Clear();
-                Console.WriteLine("Tema: {0} \nDireito a mais {1} ", Tema, Tentativas);
+                Console.WriteLine("Tema: {0} \n\nDireito a {1} Tentativas ", Tema, Tentativas);
                 Console.WriteLine();
 
                 for (int j = 0; j < caracterCertos.Length; j++)
