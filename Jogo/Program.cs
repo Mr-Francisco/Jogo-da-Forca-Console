@@ -19,7 +19,7 @@ namespace Exercicios
 
             Console.Clear();
             System.Console.WriteLine("Benvindo ao jogo da Forca  ");
-              Console.WriteLine("Queris continuar se sim prima 'S' ");
+              Console.WriteLine("Escrever as respsosta em Letras Minusculas \n Queris continuar se sim prima 'S' ");
           
             Resposta = Console.ReadLine();
             if (Resposta is null)
@@ -31,11 +31,11 @@ namespace Exercicios
                 Retorno = Jogos();
                 Console.Clear();
                 if (Retorno == 0)
-                    Console.Write("Voce Perdeu !");
+                    Console.WriteLine("Voce Perdeu !");
                 else if (Retorno == 1)
-                    Console.Write("Voce Venceu !");
+                    Console.WriteLine("Voce Venceu !");
                 else
-                    Console.Write("Nao Sei");
+                    Console.WriteLine("Nao Sei");
 
 
                 Console.Write("Quer continuar ? sem prima s ");
@@ -67,7 +67,7 @@ namespace Exercicios
         {
             List<string> Dados = new();
 
-            string[] dados = File.ReadAllLines(CaminhoDeDados);
+            string[] dados = File.ReadAllLines(CaminhoDeDados,System.Text.Encoding.UTF8);
             Random random = new();
 
 
@@ -76,7 +76,7 @@ namespace Exercicios
             {
                 if (c.StartsWith(r1.ToString()))
                 {
-                    Dados.Add(c.Trim());
+                    Dados.Add(c.Trim().ToLower());
 
                 }
             }
