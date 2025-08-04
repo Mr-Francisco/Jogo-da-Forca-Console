@@ -11,16 +11,16 @@ namespace Exercicios
 
         {
 
-            int Retorno=0;
+            int Retorno = 0;
 
 
             string? Resposta;
-           
+
 
             Console.Clear();
             System.Console.WriteLine("Benvindo ao jogo da Forca  ");
-              Console.WriteLine("Escrever as respsosta em Letras Minusculas \n Queris continuar se sim prima 'S' ");
-          
+            Console.WriteLine("Escrever as respsosta em Letras Minusculas \n Queris continuar se sim prima 'S' ");
+
             Resposta = Console.ReadLine();
             if (Resposta is null)
                 Resposta = "N";
@@ -39,9 +39,9 @@ namespace Exercicios
 
 
                 Console.Write("Quer continuar ? sem prima s ");
-                    Resposta = Console.ReadLine();
-            if (Resposta is null)
-                Resposta = "N";
+                Resposta = Console.ReadLine();
+                if (Resposta is null)
+                    Resposta = "N";
 
 
             }
@@ -55,9 +55,9 @@ namespace Exercicios
 
 
 
-          
 
-           
+
+
 
         }
 
@@ -67,7 +67,7 @@ namespace Exercicios
         {
             List<string> Dados = new();
 
-            string[] dados = File.ReadAllLines(CaminhoDeDados,System.Text.Encoding.UTF8);
+            string[] dados = File.ReadAllLines(CaminhoDeDados, System.Text.Encoding.UTF8);
             Random random = new();
 
 
@@ -90,7 +90,7 @@ namespace Exercicios
         {
             string Tema;
             string Questao;
-            int count = 1;
+            int Count = 1;
             int Tentativas = 3;
             List<string> Dados = Lista();
             Tema = Dados[0];
@@ -98,8 +98,8 @@ namespace Exercicios
 
 
 
-            string[] quetao = Dados[count].Replace(" ", "").Split("-");
-            Questao = quetao[count];
+            string[] quetao = Dados[Count].Replace(" ", "").Split("-");
+            Questao = quetao[Count];
             char[] caracterCertos = Questao.ToArray();
             char[] caracterNaoPreenchido = new char[caracterCertos.Length];
             char caracterDigitado;
@@ -142,7 +142,7 @@ namespace Exercicios
                     else
 
                     {
-                       
+
                         return 0;
 
                     }
@@ -153,17 +153,19 @@ namespace Exercicios
                 }
 
 
-                if (Acertos == caracterCertos.Length - 1)
+                if (Acertos == caracterCertos.Length)
                     return 1;
-               
+
 
             }
 
 
             return 0;
-            
-        
-         } 
+            Count++;
+
+        } 
+         
+      
 
     }
 }
