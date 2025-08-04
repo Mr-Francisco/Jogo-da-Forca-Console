@@ -11,6 +11,8 @@ namespace Exercicios
 
         {
 
+            int Retorno=0;
+
 
             string? Resposta;
            
@@ -24,7 +26,16 @@ namespace Exercicios
             while (Resposta.ToUpper() == "S")
             {
 
-                Jogos();
+                Retorno = Jogos();
+                if (Retorno == 0)
+                    Console.Write("Voce Perdeu !");
+                else if (Retorno == 1)
+                    Console.Write("Voce Venceu !");
+                else
+                    Console.Write("Nao Sei");
+                   
+
+                    Console.Write("Quer continuar ? sem prima s ");
 
 
             }
@@ -70,12 +81,12 @@ namespace Exercicios
 
         }
 
-        public static void Jogos()
+        public static int Jogos()
         {
             string Tema;
             string Questao;
             int count = 1;
-            int Tentativas = 0;
+            int Tentativas = 3;
             List<string> Dados = Lista();
             Tema = Dados[0];
             int posicao = 0;
@@ -95,57 +106,56 @@ namespace Exercicios
 
             while (Acertos <= caracterCertos.Length)
             {
-                    Console.Clear();
-                    Console.WriteLine("Tema: {0}  ", Tema);
-                    Console.WriteLine();
+                Console.Clear();
+                Console.WriteLine("Tema: {0} \nDireito a mais {1} ", Tema, Tentativas);
+                Console.WriteLine();
 
                 for (int j = 0; j < caracterCertos.Length; j++)
                 {
                     Console.Write(caracterNaoPreenchido[j]);
-               }
+                }
                 Console.WriteLine();
-                    Console.Write("Digite o caracter : ");
-                      Console.WriteLine("Numero de Tentativas: {0}  ", Tentativas);
-                  caracterDigitado =  Convert.ToChar(Console.ReadLine());
+                Console.Write("Digite o caracter : ");
+
+                caracterDigitado = Convert.ToChar(Console.ReadLine());
                 if (caracterDigitado == caracterCertos[Acertos])
                 {
                     caracterNaoPreenchido[posicao] = caracterDigitado;
                     posicao++;
                     Acertos++;
+                    Tentativas = 3;
 
 
 
                 }
                 else
                 {
-                    if (Tentativas < 4)
+                    if (Tentativas > 0)
                     {
-                        Tentativas++;
+                        Tentativas--;
                     }
                     else
 
                     {
-                         Console.Write("Voce Perdeu !");
-                          return;
-                        
-                    }
                        
+                        return 0;
+
+                    }
+
 
 
 
                 }
 
-                
 
+                if (Acertos == caracterCertos.Length - 1)
+                    return 1;
                
 
             }
-                
-                 if (count > 9)
-                    Lista();
 
-            count++;
 
+            return 0;
             
         
          } 
